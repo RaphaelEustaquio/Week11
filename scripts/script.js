@@ -17,7 +17,7 @@
 // greet("Aleks");
 // greet()
 
-let shoppingList = ["cheese", "bread", "chips", "ice cream"];
+let shoppingList = ["cheese", "bread", "chips", "ice cream", "green cheese"];
 
 const unorderedListElement = document.querySelector(".shopping")
 
@@ -53,3 +53,18 @@ function updateImg ()
 }
 
 updateImg()
+
+function greenCheck()
+{   
+    const textElement = document.querySelectorAll(".shopping li");
+    console.log(textElement)
+    for (let i = 0; i < textElement.length ; i++)
+    {
+        if (textElement[i].textContent.includes("green"))
+        {
+            textElement[i].classList.add("greenText");
+        }
+    }
+}
+
+greenCheck();
